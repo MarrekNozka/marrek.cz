@@ -4,16 +4,19 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Marek Nožka'
 SITENAME = u'Marrek.cz'
-SITEURL = ''
+# SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'Europe/Prague'
 
 DEFAULT_LANG = u'cs'
+DEFAULT_DATE = 'fs'
+DEFAULT_CATEGORY = 'Blog'
 
 THEME = 'theme-simplegray/'
 
+TYPOGRIFY = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -21,6 +24,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+GITHUB_URL = 'https://github.com/marreknozka/marreknozka.github.io'
 
 # Blogroll
 LINKS = (
@@ -59,12 +64,15 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 20
 
-MD_EXTENSIONS = [
-    'codehilite(css_class=highlight)',
-    'extra',
-    'headerid(level=2)',
-    'toc',
-    'linksShortcuts:Shortcuts',
-]
+# MARKDOWN = [
+#     'codehilite(css_class=highlight)',
+#     'extra',
+#     'headerid(level=2)',
+#     'toc',
+#     'linksShortcuts:Shortcuts',
+# ]
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
+
+STATIC_PATHS = ['img', 'images', 'extra/CNAME', 'src']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
