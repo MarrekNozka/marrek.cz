@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Marek Nožka'
 SITENAME = u'Marrek.cz'
-# SITEURL = ''
+SITEURL = ''
 
 PATH = 'content'
 
@@ -71,6 +71,17 @@ DEFAULT_PAGINATION = 20
 #     'toc',
 #     'linksShortcuts:Shortcuts',
 # ]
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.toc': {},
+        'markdown.extensions.headerid': {'level': 2},
+    },
+    'output_format': 'html5',
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
