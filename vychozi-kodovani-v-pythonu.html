@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Výchozí kódování v&nbsp;Pythonu - Marrek.cz</title>	
+	<meta name="author" content="Marek Nožka">
+	
+
+	<meta name="description" content="Jak nastavit Python, aby správně tiskl řetězce obsahující diakritiku.">
+
+
+	<link rel="top" href="#" /><link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="https://marrek.cz/theme/css/main.css" type="text/css" />
+		
+
+    <link href="https://marrek.cz/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Marrek.cz Atom Feed" />
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	        <a href="https://marrek.cz/feeds/all.atom.xml" rel="alternate"><img src="https://marrek.cz/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
+	    </div>
+	      <nav class="pages">
+			  <a href="https://marrek.cz/pages/tlapicka.html">O&nbsp;mně</a>
+	      </nav>
+		<a href="https://marrek.cz" class="title">Marrek.cz</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>Výchozí kódování v&nbsp;Pythonu</h1>
+		
+<div class="metadata">
+  <time datetime="2014-04-28T16:47:00+02:00" pubdate>Po 28 duben 2014</time>
+    <address class="vcard author">
+      by <a class="url fn" href="https://marrek.cz/author/marek-nozka.html">Marek Nožka</a>
+    </address>
+  in <a href="https://marrek.cz/category/blog.html">Blog</a>
+<p class="tags">tagged <a href="https://marrek.cz/tag/python.html">python</a>, <a href="https://marrek.cz/tag/io.html">I/O</a></p></div>		
+		<p>Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
+Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
+Většinou není co řešit a program si prostě spustím, ale občas dělá problém
+diakritika v unicode řetězcích.&nbsp;Třeba:</p>
+<div class="highlight"><pre><span class="n">cislo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">u&#39;napiš nějaké číslo&#39;</span><span class="p">)</span>
+<span class="o">.....</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;pokus.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Loď čeří kýlem vodu v úžině&#39;</span><span class="p">)</span>
+<span class="o">.....</span>
+</pre></div>
+
+
+<p>Python se snaží v těchto situacích unicode řetězec konvertovat do
+příslušné znakové sady. Problém je, že neví, která znaková sada je ta
+&#8220;příslušná&#8221; a proto končí s chybovým&nbsp;hlášením:</p>
+<div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
+<span class="err">File &quot;kodovani.py&quot;, line 30, in &lt;module&gt;</span>
+<span class="go">    f.write(cestina)</span>
+<span class="go">UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode character u&#39;\u010f&#39;</span>
+<span class="go">in position 2: ordinal not in range(128)</span>
+</pre></div>
+
+
+<p>Nejdřív to, co problémy nedělá: S tímto kódem problémy nejsou, protože kódování
+pro standardní vstup/výstup je nastaveno na <code>UTF-8</code>.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">print</span> <span class="s2">&quot;default encoding: &quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">getdefaultencoding</span><span class="p">()</span>
+
+<span class="n">cestina</span> <span class="o">=</span> <span class="s1">u&#39;Loď v úžině</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+<span class="k">print</span> <span class="n">cestina</span>              <span class="c1"># tohle je OK</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cestina</span><span class="p">)</span>  <span class="c1"># tohle taky</span>
+<span class="c1"># prototože</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Pokud je třeba nějak měnit kódování standardního vstupu/výstupu je to možné
+udělat jednoduše přes proměnnou prostředí <code>PYTHONIOENCODING</code>. Výstup potom
+vypadá&nbsp;takto:</p>
+<div class="highlight"><pre><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>cp1250 ./kodovani.py
+<span class="go">default encoding:  utf-8</span>
+<span class="go">Loï v úin</span>
+
+<span class="go">Loï v úinì</span>
+<span class="go">(&#39;cp1250&#39;, &#39;cp1250&#39;)</span>
+</pre></div>
+
+
+<p>Default encoding zůstalo stejné, změnilo se jen kódování standardního
+vstupu/výstupu. Jak tedy nastavit <code>defaultencoding</code>?. To se totiž projeví u
+otevřených souborů nebo například u vestavěné funkce <code>raw_input()</code>.</p>
+<p>Nejjednodušší je použít funkci <code>sys.setdefaultencoding()</code>. Má to ale jeden malý
+háček. Takto funkce je dostupná pouze při spuštění Pythonu. Dále se setkáme s
+chybovým&nbsp;hlášením.</p>
+<div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
+<span class="err">File &quot;kodovani.py&quot;, line 12, in &lt;module&gt;</span>
+<span class="go">    sys.setdefaultencoding(&quot;utf-8&quot;)</span>
+<span class="go">AttributeError: &#39;module&#39; object has no attribute &#39;setdefaultencoding&#39;</span>
+</pre></div>
+
+
+<p>První fígl je použít funkci <code>reload()</code>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>  <span class="c1"># to enable `setdefaultencoding` again</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>nebo</p>
+<div class="highlight"><pre><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Druhý fígl je spustit Python s parametrem <code>-S</code>. Ten zakáže automatický import
+modulu <code>site</code>, který výchozí znakovou sadu nastavuje a funkci
+<code>setdefaultencoding</code> poté&nbsp;znepřístupní.</p>
+<div class="highlight"><pre><span class="ch">#!/usr/bin/python2.7 -S</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">site</span>
+</pre></div>
+
+
+<p>Výše jsem uvedl řešení pro jeden konkrétní zdrojový kód. Pokud požadujeme
+<strong>globální nastavení</strong> stačí vytvořit soubor <code>sitecustomize.py</code> a umístit ho
+někam do <code>PYTHONPATH</code> respektive do <code>sys.path</code>.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<dl>
+<dt>Odkazy:</dt>
+<dd><a href="http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python">http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python</a></dd>
+<dd><a href="http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python">http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python</a></dd>
+<dd><a href="http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex">http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex</a></dd>
+</dl>	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Categories</h2>
+	          <ul>
+	              <li class="active"><a href="https://marrek.cz/category/blog.html">Blog</a></li>
+	          </ul>
+	        </nav>
+
+	          <aside>
+	          <h2>Social</h2>
+			    <ul class="social">
+				  <li><a href="http://github.com/MarrekNozka">Github</a><i></i></li>
+				  <li><a href="http://twitter.com/MarrekNozka">Twitter</a><i></i></li>
+				  <li><a href="https://www.youtube.com/user/YouTlapickaTube">YouTube</a><i></i></li>
+				  <li><a href="http://www.flickr.com/photos/tlapicka/">Flickr</a><i></i></li>
+				  <li><a href="http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka">Wikipedista</a><i></i></li>
+				  <li><a href="http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka">Wikiobčan</a><i></i></li>
+				  <li><a href="http://cs.wikibooks.org/wiki/User:Tlapicka">Wikispisovatel</a><i></i></li>
+				  <li><a href="http://mamut.spseol.cz/nozka/">Mamut</a><i></i></li>
+			    </ul>
+			  </aside>
+
+	          <aside>
+	            <h2>Blogroll</h2>
+	            <ul>
+	                <li><a href="http://www.jezisuzdravuje.cz">www.jezisuzdravuje.cz</a></li>
+	                <li><a href="http://www.vojtechkodet.cz">www.vojtechkodet.cz</a></li>
+	                <li><a href="http://milujte.se">Milujte se</a></li>
+	                <li><a href="http://www.b-a-n.cz/informace.html">Ron Wyatt</a></li>
+	                <li><a href="http://www.stvoreni.cz/">Stvoření?</a></li>
+	                <li><a href="http://www.manzelstvi.cz/">Manželství.cz</a></li>
+	                <li><a href="http://www.maria.cz/">Maria.cz</a></li>
+	                <li><a href="http://prolife.cz/">Jsem pro život</a></li>
+	                <li><a href="http://www.kurzyalfa.cz/">Kurzy α</a></li>
+	                <li><a href="http://matplotlib.org">MatPlotLib</a></li>
+	                <li><a href="http://www.numpy.org/">NumPy</a></li>
+	                <li><a href="http://scipy.org/">SciPy</a></li>
+	                <li><a href="http://zim-wiki.org/">Zim - A Desktop Wiki</a></li>
+	                <li><a href="http://www.spseol.cz/">VOŠ a SPŠe Olomouc</a></li>
+	                <li><a href="http://antispam.er.cz/">Antispam</a></li>
+	                <li><a href="http://www.trekovaobuv.eu/">Oprava trekové obuvy</a></li>
+	                <li><a href="https://searchcode.com/">searchcode.com</a></li>
+	            </ul>
+	          </aside>
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Marek Nožka - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
