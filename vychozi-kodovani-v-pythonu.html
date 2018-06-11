@@ -48,7 +48,7 @@
 Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
 Většinou není co řešit a program si prostě spustím, ale občas dělá problém
 diakritika v unicode řetězcích.&nbsp;Třeba:</p>
-<div class="highlight"><pre><span class="n">cislo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">u&#39;napiš nějaké číslo&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">cislo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;napiš nějaké číslo&#39;</span><span class="p">)</span>
 <span class="o">.....</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;pokus.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Loď čeří kýlem vodu v úžině&#39;</span><span class="p">)</span>
@@ -59,7 +59,7 @@ diakritika v unicode řetězcích.&nbsp;Třeba:</p>
 <p>Python se snaží v těchto situacích unicode řetězec konvertovat do
 příslušné znakové sady. Problém je, že neví, která znaková sada je ta
 &#8220;příslušná&#8221; a proto končí s chybovým&nbsp;hlášením:</p>
-<div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
+<div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
 <span class="err">File &quot;kodovani.py&quot;, line 30, in &lt;module&gt;</span>
 <span class="go">    f.write(cestina)</span>
 <span class="go">UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode character u&#39;\u010f&#39;</span>
@@ -69,11 +69,11 @@ příslušné znakové sady. Problém je, že neví, která znaková sada je ta
 
 <p>Nejdřív to, co problémy nedělá: S tímto kódem problémy nejsou, protože kódování
 pro standardní vstup/výstup je nastaveno na <code>UTF-8</code>.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">print</span> <span class="s2">&quot;default encoding: &quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">getdefaultencoding</span><span class="p">()</span>
 
-<span class="n">cestina</span> <span class="o">=</span> <span class="s1">u&#39;Loď v úžině</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">cestina</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Loď v úžině</span><span class="se">\n</span><span class="s1">&#39;</span>
 
 <span class="k">print</span> <span class="n">cestina</span>              <span class="c1"># tohle je OK</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cestina</span><span class="p">)</span>  <span class="c1"># tohle taky</span>
@@ -85,7 +85,7 @@ pro standardní vstup/výstup je nastaveno na <code>UTF-8</code>.</p>
 <p>Pokud je třeba nějak měnit kódování standardního vstupu/výstupu je to možné
 udělat jednoduše přes proměnnou prostředí <code>PYTHONIOENCODING</code>. Výstup potom
 vypadá&nbsp;takto:</p>
-<div class="highlight"><pre><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>cp1250 ./kodovani.py
+<div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>cp1250 ./kodovani.py
 <span class="go">default encoding:  utf-8</span>
 <span class="go">Loï v úin</span>
 
@@ -100,7 +100,7 @@ otevřených souborů nebo například u vestavěné funkce <code>raw_input()</c
 <p>Nejjednodušší je použít funkci <code>sys.setdefaultencoding()</code>. Má to ale jeden malý
 háček. Takto funkce je dostupná pouze při spuštění Pythonu. Dále se setkáme s
 chybovým&nbsp;hlášením.</p>
-<div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
+<div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
 <span class="err">File &quot;kodovani.py&quot;, line 12, in &lt;module&gt;</span>
 <span class="go">    sys.setdefaultencoding(&quot;utf-8&quot;)</span>
 <span class="go">AttributeError: &#39;module&#39; object has no attribute &#39;setdefaultencoding&#39;</span>
@@ -108,21 +108,21 @@ chybovým&nbsp;hlášením.</p>
 
 
 <p>První fígl je použít funkci <code>reload()</code>:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>  <span class="c1"># to enable `setdefaultencoding` again</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>nebo</p>
-<div class="highlight"><pre><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Druhý fígl je spustit Python s parametrem <code>-S</code>. Ten zakáže automatický import
 modulu <code>site</code>, který výchozí znakovou sadu nastavuje a funkci
 <code>setdefaultencoding</code> poté&nbsp;znepřístupní.</p>
-<div class="highlight"><pre><span class="ch">#!/usr/bin/python2.7 -S</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python2.7 -S</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
@@ -133,7 +133,7 @@ modulu <code>site</code>, který výchozí znakovou sadu nastavuje a funkci
 <p>Výše jsem uvedl řešení pro jeden konkrétní zdrojový kód. Pokud požadujeme
 <strong>globální nastavení</strong> stačí vytvořit soubor <code>sitecustomize.py</code> a umístit ho
 někam do <code>PYTHONPATH</code> respektive do <code>sys.path</code>.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
 </pre></div>
 

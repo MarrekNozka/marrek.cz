@@ -67,7 +67,7 @@ lze zajistit pomocí <span class="caps">SSH</span>&nbsp;klíčů.</p>
 </dl>
 <p>Vygenerujeme rootovi <a href="">[!enwk keypair]</a>. Důležité je, aby byl privátní klíč 
 bez <code>passphrase</code>. Při dotazu na <code>passphrase</code> je tedy třeba zadat jen <code>Enter</code>.</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh-keygen -t dsa
+<div class="highlight"><pre><span></span><span class="gp">#</span> ssh-keygen -t dsa
 <span class="go">Generating public/private dsa key pair.</span>
 <span class="go">Enter file in which to save the key (/root/.ssh/id_dsa):</span>
 <span class="go">Enter passphrase (empty for no passphrase): </span>
@@ -95,13 +95,13 @@ bez <code>passphrase</code>. Při dotazu na <code>passphrase</code> je tedy tře
 <code>~/.ssh/authorized_keys</code>. Pokud už soubor nějaké klíče obsahuje klíč se
 jednoduše připojí na&nbsp;konec.</p>
 <p>Toto lze zařídit mnoha způsoby. Například&nbsp;takto:</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh user@masina.nekde.tld <span class="s1">&#39;cat &gt;&gt;~/.ssh/authorized_keys&#39;</span> &lt;~/.ssh/id_dsa.pub
+<div class="highlight"><pre><span></span><span class="gp">#</span> ssh user@masina.nekde.tld <span class="s1">&#39;cat &gt;&gt;~/.ssh/authorized_keys&#39;</span> &lt;~/.ssh/id_dsa.pub
 </pre></div>
 
 
 <p>V tomto okamžiku by mělo fungovat přihlášení roota ke vzdálenému počítači bez
 hesla, jen na základě&nbsp;klíče.</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh user@masina.nekde.tld
+<div class="highlight"><pre><span></span><span class="gp">#</span> ssh user@masina.nekde.tld
 </pre></div>
 
 
@@ -110,14 +110,14 @@ fungovat, pokud uživatel root nebude mít ověřenou identitu serveru. A to se
 děje právě při první přihlášení pomocí <span class="caps">SSH</span>.</p>
 <h2 id="konfigurace-autofs">Konfigurace&nbsp;autofs</h2>
 <p>Autofs je třeba nejprve&nbsp;naistalovat:</p>
-<div class="highlight"><pre><span class="gp">#</span> aptitude install autofs sshfs
+<div class="highlight"><pre><span></span><span class="gp">#</span> aptitude install autofs sshfs
 </pre></div>
 
 
 <p>Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
 poměrně&nbsp;dlouhé:</p>
 <p><code>/etc/auto.sshfs</code></p>
-<div class="highlight"><pre>masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
+<div class="highlight"><pre><span></span>masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
 borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.tld:/home/stud/borec
 </pre></div>
 
@@ -126,12 +126,12 @@ borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.
 mapovat. Pokud neznáte své <code>uid</code> neznáte stačí spustit příkaz <code>id</code>.</p>
 <p>Takto vytvořený soubor musíme zaregistrovat aby o něm Autofs věděl. To se dá
 zařídit v souboru <code>/etc/auto.master</code>. Na konec jsem přidal&nbsp;řádek:</p>
-<div class="highlight"><pre>/mnt/sshfs   /etc/auto.sshfs --timeout=30
+<div class="highlight"><pre><span></span>/mnt/sshfs   /etc/auto.sshfs --timeout=30
 </pre></div>
 
 
 <p>Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v&nbsp;konfiguraci.</p>
-<div class="highlight"><pre><span class="gp">#</span> /etc/init.d/autofs restart
+<div class="highlight"><pre><span></span><span class="gp">#</span> /etc/init.d/autofs restart
 </pre></div>
 
 
@@ -144,7 +144,7 @@ automaticky&nbsp;odpojí.</p>
 file-systémech prázdná. Když jsem chtěl její jméno doplnit tabulátorem shell si
 na tento adresář &#8220;sáhnul&#8221; a připojili se všechny oddíly. Proto jsem v souboru
 <code>/etc/default/autofs</code> zapnul/odkomentoval&nbsp;volbu </p>
-<div class="highlight"><pre>BROWSE_MODE=&quot;yes&quot;
+<div class="highlight"><pre><span></span>BROWSE_MODE=&quot;yes&quot;
 </pre></div>
 
 
