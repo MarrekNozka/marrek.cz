@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>marrek.cz - Marek Nožka</title><link href="https://marrek.cz/" rel="alternate"></link><link href="https://marrek.cz/feeds/marek-nozka.atom.xml" rel="self"></link><id>https://marrek.cz/</id><updated>2018-06-11T11:52:06+02:00</updated><entry><title>Istanbulská úmluva</title><link href="https://marrek.cz/istanbulska-umluva.html" rel="alternate"></link><published>2018-06-07T10:45:00+02:00</published><updated>2018-06-11T11:52:06+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2018-06-07:/istanbulska-umluva.html</id><summary type="html">&lt;p&gt;Summary: Tato úmluva může naprosto zásadně ovlivnit životy našich rodin a
+<feed xmlns="http://www.w3.org/2005/Atom"><title>marrek.cz - Marek Nožka</title><link href="https://marrek.cz/" rel="alternate"></link><link href="https://marrek.cz/feeds/marek-nozka.atom.xml" rel="self"></link><id>https://marrek.cz/</id><updated>2020-11-20T20:11:39+01:00</updated><entry><title>Istanbulská úmluva</title><link href="https://marrek.cz/istanbulska-umluva.html" rel="alternate"></link><published>2018-06-07T10:45:00+02:00</published><updated>2020-11-20T20:11:17+01:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2018-06-07:/istanbulska-umluva.html</id><summary type="html">&lt;p&gt;Summary: Tato úmluva může naprosto zásadně ovlivnit životy našich rodin a
          zejména životy křesťanských rodin. Přesto, že jedná o opravdu
          zásadní dokument, který ČR zaváže k mnoha nehezkým věcem,
          vůbec se o něm nemluví a veřejnost o něm pramálo&amp;nbsp;ví.&lt;/p&gt;
@@ -160,7 +160,7 @@ a na mnoha místech stále připomíná jak je potřebná modlitba a&amp;nbsp;p�
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://youtu.be/RNnYvYnngs8"&gt;https://youtu.be/RNnYvYnngs8&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://youtu.be/zULjFcqL_Ns"&gt;https://youtu.be/zULjFcqL_Ns&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Blog"></category><category term="Maria"></category></entry><entry><title>Hra života — Game of live</title><link href="https://marrek.cz/hra-zivota-game-of-live.html" rel="alternate"></link><published>2015-06-08T14:41:00+02:00</published><updated>2018-06-07T23:03:18+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2015-06-08:/hra-zivota-game-of-live.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cs.wikipedia.org/wiki/Hra_života"&gt;Hra života&lt;/a&gt; je dvoustavový, dvourozměrný celulární automat, který svým
+&lt;/ul&gt;</content><category term="Blog"></category><category term="Maria"></category></entry><entry><title>Hra života — Game of live</title><link href="https://marrek.cz/hra-zivota-game-of-live.html" rel="alternate"></link><published>2015-06-08T14:41:00+02:00</published><updated>2020-11-20T20:11:04+01:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2015-06-08:/hra-zivota-game-of-live.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cs.wikipedia.org/wiki/Hra_života"&gt;Hra života&lt;/a&gt; je dvoustavový, dvourozměrný celulární automat, který svým
 chováním připomíná vývoj společenství živých organismů. Odehrává se na matici
 buněk, jejíž stav předurčuje podobu hry v následujícím&amp;nbsp;kroku.&lt;/p&gt;
 &lt;p&gt;Už moc nevím, kde jsem se k této hře nebo algoritmu dostal, ale docela se mi
@@ -283,131 +283,7 @@ následujícím kroku se rozhodne podle těchto&amp;nbsp;pravidel:&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;Pravidla lze samozřejmě 
 &lt;a href="http://cs.wikipedia.org/wiki/Hra_života#Pravidla_celul.C3.A1rn.C3.ADch_automat.C5.AF_zalo.C5.BEen.C3.BDch_na_H.C5.99e_.C5.BEivota"&gt;upravovat&lt;/a&gt;
-&amp;#8212; lze tak dosáhnout poměrně zajímavých&amp;nbsp;výsledků&amp;#8230;&lt;/p&gt;</content><category term="Blog"></category><category term="python"></category></entry><entry><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link href="https://marrek.cz/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="alternate"></link><published>2014-10-31T14:57:00+01:00</published><updated>2018-06-07T22:53:41+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2014-10-31:/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</id><summary type="html">&lt;h2 id="autofs"&gt;Autofs&lt;a class="headerlink" href="#autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
-prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
-základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
-Sambu nebo jakékoliv &lt;span class="caps"&gt;FUSE&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
-úplně jiný …&lt;/p&gt;</summary><content type="html">&lt;h2 id="autofs"&gt;Autofs&lt;a class="headerlink" href="#autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
-prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
-základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
-Sambu nebo jakékoliv &lt;span class="caps"&gt;FUSE&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
-úplně jiný problém. Mě při této příležitosti napadlo, že si takto můžu připojit
-své vzdálené disky, které jsem zatím, připojoval ručně pomocí příkazu &lt;code&gt;sshfs&lt;/code&gt;.
-V tomto zápisku se tedy zaměřím na &lt;a href="http://packages.debian.org/sshfs"&gt;sshfs&lt;/a&gt;, 
-ale &lt;a href="autofs Samba"&gt;[!dd našel]&lt;/a&gt; jsem &lt;a href="http://www.howtoforge.com/accessing_windows_or_samba_shares_using_autofs"&gt;hezký návod i pro Sambu&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="ssh-klice-pro-roota"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; klíče pro Roota&lt;a class="headerlink" href="#ssh-klice-pro-roota" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Nejprve je třeba zajistit, aby se lokální uživatel &lt;code&gt;root&lt;/code&gt; dostal ke vzdálenému
-uživatelskému účtu a nemusel zapisovat heslo &amp;#8212; vše se má dít automaticky. To
-lze zajistit pomocí &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíčů.&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; a &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíče:&lt;/dt&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/"&gt;Seriál Pokročilé vlastnosti&amp;nbsp;OpenSSH&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/"&gt;Jak se přihlašovat na &lt;span class="caps"&gt;SSH&lt;/span&gt; bez zadávání&amp;nbsp;hesla&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell"&gt;OpenSSH - více než jen Secure&amp;nbsp;Shell&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne"&gt;OpenSSH - bezpečně a&amp;nbsp;pohodlně&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;Vygenerujeme rootovi &lt;a href=""&gt;[!enwk keypair]&lt;/a&gt;. Důležité je, aby byl privátní klíč 
-bez &lt;code&gt;passphrase&lt;/code&gt;. Při dotazu na &lt;code&gt;passphrase&lt;/code&gt; je tedy třeba zadat jen &lt;code&gt;Enter&lt;/code&gt;.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh-keygen -t dsa
-&lt;span class="go"&gt;Generating public/private dsa key pair.&lt;/span&gt;
-&lt;span class="go"&gt;Enter file in which to save the key (/root/.ssh/id_dsa):&lt;/span&gt;
-&lt;span class="go"&gt;Enter passphrase (empty for no passphrase): &lt;/span&gt;
-&lt;span class="go"&gt;Enter same passphrase again: &lt;/span&gt;
-&lt;span class="go"&gt;Your identification has been saved in /root/.ssh/id_dsa.&lt;/span&gt;
-&lt;span class="go"&gt;Your public key has been saved in /root/.ssh/id_dsa.pub.&lt;/span&gt;
-&lt;span class="go"&gt;The key fingerprint is:&lt;/span&gt;
-&lt;span class="go"&gt;03:ca:c2:ae:42:b8:e8:8f:85:b8:fd:2f:7b:5f:a6:7e marek@impala&lt;/span&gt;
-&lt;span class="go"&gt;The key&amp;#39;s randomart image is:&lt;/span&gt;
-&lt;span class="go"&gt;+---[DSA 1024]----+&lt;/span&gt;
-&lt;span class="go"&gt;|                 |&lt;/span&gt;
-&lt;span class="go"&gt;|                 |&lt;/span&gt;
-&lt;span class="go"&gt;|      .          |&lt;/span&gt;
-&lt;span class="go"&gt;| . . . .         |&lt;/span&gt;
-&lt;span class="go"&gt;|. o o   S        |&lt;/span&gt;
-&lt;span class="go"&gt;|oo..     .       |&lt;/span&gt;
-&lt;span class="go"&gt;|+o..      o      |&lt;/span&gt;
-&lt;span class="go"&gt;|++o . .  +E      |&lt;/span&gt;
-&lt;span class="go"&gt;|=oooo=.o+.       |&lt;/span&gt;
-&lt;span class="go"&gt;+-----------------+&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Veřejný klíč je poté třeba dopravit na vzdálený počítač do souboru
-&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. Pokud už soubor nějaké klíče obsahuje klíč se
-jednoduše připojí na&amp;nbsp;konec.&lt;/p&gt;
-&lt;p&gt;Toto lze zařídit mnoha způsoby. Například&amp;nbsp;takto:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld &lt;span class="s1"&gt;&amp;#39;cat &amp;gt;&amp;gt;~/.ssh/authorized_keys&amp;#39;&lt;/span&gt; &amp;lt;~/.ssh/id_dsa.pub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;V tomto okamžiku by mělo fungovat přihlášení roota ke vzdálenému počítači bez
-hesla, jen na základě&amp;nbsp;klíče.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Přihlášení je dobré ověřit ještě před konfigurací Autofs. sshfs nebude
-fungovat, pokud uživatel root nebude mít ověřenou identitu serveru. A to se
-děje právě při první přihlášení pomocí &lt;span class="caps"&gt;SSH&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id="konfigurace-autofs"&gt;Konfigurace autofs&lt;a class="headerlink" href="#konfigurace-autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Autofs je třeba nejprve&amp;nbsp;naistalovat:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;#&lt;/span&gt; aptitude install autofs sshfs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
-poměrně&amp;nbsp;dlouhé:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;/etc/auto.sshfs&lt;/code&gt;&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
-borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.tld:/home/stud/borec
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;&lt;code&gt;uid&lt;/code&gt; a &lt;code&gt;gid&lt;/code&gt; patří uživateli, na kterého se bude připojený souborový systém
-mapovat. Pokud neznáte své &lt;code&gt;uid&lt;/code&gt; neznáte stačí spustit příkaz &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Takto vytvořený soubor musíme zaregistrovat aby o něm Autofs věděl. To se dá
-zařídit v souboru &lt;code&gt;/etc/auto.master&lt;/code&gt;. Na konec jsem přidal&amp;nbsp;řádek:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/mnt/sshfs   /etc/auto.sshfs --timeout=30
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v&amp;nbsp;konfiguraci.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gp"&gt;#&lt;/span&gt; /etc/init.d/autofs restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;h2 id="jak-se-to-pouziva"&gt;Jak se to používá?&lt;a class="headerlink" href="#jak-se-to-pouziva" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Jednoduše vstoupíte do adresáře &lt;code&gt;/mnt/sshfs/masina&lt;/code&gt; nebo si třeba vypíšete
-obsah adresáře &lt;code&gt;/mnt/sshfs/borec&lt;/code&gt;. Souborový systém se automaticky připojí
-jakmile na něj sáhnete. &amp;#8230; a po 30 sekundách, co na něj nesáhnete se
-automaticky&amp;nbsp;odpojí.&lt;/p&gt;
-&lt;p&gt;Mě ještě trochu točilo, že složka &lt;code&gt;/mnt/sshfs&lt;/code&gt; je při odpojených vzdálených
-file-systémech prázdná. Když jsem chtěl její jméno doplnit tabulátorem shell si
-na tento adresář &amp;#8220;sáhnul&amp;#8221; a připojili se všechny oddíly. Proto jsem v souboru
-&lt;code&gt;/etc/default/autofs&lt;/code&gt; zapnul/odkomentoval&amp;nbsp;volbu &lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;BROWSE_MODE=&amp;quot;yes&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Tím je zařízeno, že se moje &lt;code&gt;masina&lt;/code&gt; a &lt;code&gt;borec&lt;/code&gt; objeví v adresáři &lt;code&gt;/mnt/sshfs&lt;/code&gt;,
-i když jsou&amp;nbsp;odpojené.&lt;/p&gt;</content><category term="Blog"></category><category term="Linux"></category><category term="SSH"></category></entry><entry><title>Výchozí kódování v Pythonu</title><link href="https://marrek.cz/vychozi-kodovani-v-pythonu.html" rel="alternate"></link><published>2014-04-28T16:47:00+02:00</published><updated>2018-06-07T22:45:13+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2014-04-28:/vychozi-kodovani-v-pythonu.html</id><summary type="html">&lt;p&gt;Jak nastavit Python, aby správně tiskl
+&amp;#8212; lze tak dosáhnout poměrně zajímavých&amp;nbsp;výsledků&amp;#8230;&lt;/p&gt;</content><category term="Blog"></category><category term="python"></category></entry><entry><title>Výchozí kódování v Pythonu</title><link href="https://marrek.cz/vychozi-kodovani-v-pythonu.html" rel="alternate"></link><published>2014-04-28T16:47:00+02:00</published><updated>2018-06-07T22:45:13+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2014-04-28:/vychozi-kodovani-v-pythonu.html</id><summary type="html">&lt;p&gt;Jak nastavit Python, aby správně tiskl
 řetězce obsahující&amp;nbsp;diakritiku.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
 Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
 Většinou není co řešit a program si prostě spustím, ale občas dělá problém
@@ -530,7 +406,7 @@ někam do &lt;code&gt;PYTHONPATH&lt;/code&gt; respektive do &lt;code&gt;sys.path
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python"&gt;http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python"&gt;http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex"&gt;http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;</content><category term="Blog"></category><category term="python"></category><category term="I/O"></category></entry><entry><title>Python pro zpracování signálů</title><link href="https://marrek.cz/python-pro-zpracovani-signalu.html" rel="alternate"></link><published>2014-04-09T13:21:00+02:00</published><updated>2018-06-07T22:45:13+02:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2014-04-09:/python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha Python pro zpracování signálů.
+&lt;/dl&gt;</content><category term="Blog"></category><category term="python"></category><category term="I/O"></category></entry><entry><title>Python pro zpracování signálů</title><link href="https://marrek.cz/python-pro-zpracovani-signalu.html" rel="alternate"></link><published>2014-04-09T13:21:00+02:00</published><updated>2020-11-20T20:11:39+01:00</updated><author><name>Marek Nožka</name></author><id>tag:marrek.cz,2014-04-09:/python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha Python pro zpracování signálů.
 Lze ji zakoupit v podobě klasické knihy nebo
 ji číst&amp;nbsp;elektronicky.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Vyšla kniha 
 &lt;a href="https://www.springer.com/engineering/signals/book/978-3-319-01341-1"&gt;Python for Signal Processing&lt;/a&gt;.
