@@ -12,15 +12,15 @@
     "DejaVu Serif", "Times New Roman", Times, serif;
 }
 
-img[alt$=">"] {
+img[alt*=">>"] {
   float: right;
 }
 
-img[alt$="<"] {
+img[alt*="<<"] {
   float: left;
 }
 
-img[alt$="><"] {
+img[alt*="><"] {
   display: block;
   max-width: 100%;
   height: auto;
@@ -34,6 +34,9 @@ body {
 
 h1 {
     color: #115599;
+}
+h1#about-me, h1#recent-posts, h1#my-projects {
+    color: #333;
 }
 
 .page-header {
