@@ -10,6 +10,7 @@
   --serifFontFamily: Lora, Georgia, "Times New Roman", Times, serif;
   --serifHeadingFontFamily: "Bree Serif", Baskerville, Garamond, Georgia,
     "DejaVu Serif", "Times New Roman", Times, serif;
+    /*font-size: large;*/
 }
 
 img[alt*=">>"] {

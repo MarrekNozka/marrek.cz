@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>marrek.cz - MarrekNožka</title><link>https://marrek.cz/</link><description></description><lastBuildDate>Fri, 20 Nov 2020 20:12:18 +0100</lastBuildDate><item><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link>https://marrek.cz/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</link><description>&lt;h2 id="autofs"&gt;Autofs&lt;a class="headerlink" href="#autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<rss version="2.0"><channel><title>Marrek.cz - MarrekNozka</title><link>https://marrek.cz/</link><description></description><lastBuildDate>Mon, 26 Apr 2021 15:13:58 +0200</lastBuildDate><item><title>Pancíř svatého Patrika</title><link>https://marrek.cz/pancir-svateho-patrika.html</link><description>&lt;p&gt;Nedávno jsem narazil na jednu hodně starou a dle mého názoru velice hezkou
+modlitbu, která je označována jako &lt;strong&gt;Hymnus sv. Patrika&lt;/strong&gt;. Celé to začalo tím,
+že se ke mě dostala zhudebněná verze této modlitby s (neveřejnými) českými
+titulky. Angličtina není moje úplně silná stránka, ale tato modlitba se mi
+velice …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">MarrekNozka</dc:creator><pubDate>Wed, 03 Feb 2021 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:marrek.cz,2021-02-03:/pancir-svateho-patrika.html</guid><category>Blog</category><category>víra</category><category>modlitba</category></item><item><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link>https://marrek.cz/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</link><description>&lt;h2 id="autofs"&gt;Autofs&lt;a class="headerlink" href="#autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
 základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
