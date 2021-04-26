@@ -37,10 +37,10 @@ webu](http://hroch.spseol.cz/~nozka/python/matplotlib/) a na
 [Githubu](https://github.com/tlapicka/IPythonNotebooks).
 
 Výstup vypadá opravdu velice pěkně:   
-![Kvantovací šum]({filename}/img/sum.png)
+![Kvantovací šum]({static}/img/sum.png)
 
 A využití není jen v technice:   
-![Path parch demo]({filename}/img/path_patch_demo.png)
+![Path parch demo]({static}/img/path_patch_demo.png)
 
 * [Gallery](http://matplotlib.org/gallery.html)
 * [Screenshots](http://matplotlib.org/users/screenshots.html)

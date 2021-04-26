@@ -1,6 +1,5 @@
 Title: O mně
 Date: 2010-12-03 10:20
-Slug: tlapicka
 Category: Python
 Summary: About me
 
@@ -8,16 +7,15 @@ Marek Nožka
 =================
 
 <img width="200" height="249" alt="Moje fotka" 
-     src="/images/marek.jpg" style="float:right" />
+     src="/images/marek.jpg" style="float:right; margin-left:30px;"/>
+
 <ul>
 <li>absolvoval 
-<a href="http://www.spseol.cz">Střední průmyslovou školu elektrotechnickou Olomouc</a></li>
+<a href="http://www.spseol.cz">SPŠE Olomouc</a></li>
 <li>absolvoval
-<a href="http://www.feec.vutbr.cz">Fakultu elektrotechniky a komunikačních technologií</a>
-na <a href="http://www.vutbr.cz/">VUT&nbsp;v&nbsp;Brně</a></li>
+<a href="http://www.feec.vutbr.cz">FEKT</a> na <a href="http://www.vutbr.cz/">VUT&nbsp;v&nbsp;Brně</a></li>
 <li>vyučuje odborné technické předměty 
 na&nbsp;<a href="http://www.spseol.cz">VOŠ&nbsp;a&nbsp;SPŠe&nbsp;Olomouc</a></li>
-<li>provozuje <a href="http://mamut.spseol.cz/nozka">malý web pro podporu své výuky</a></li>
 <li>používá 
 <a href="http://www.linux.cz/">Linux</a> a propaguje
 <a href="http://cs.wikipedia.org/wiki/Open_source">Open source</a> řešení</li>
@@ -58,32 +56,5 @@ Kontakt
 
 <dl>
     <dt>E-mail</dt>
-    <dd>marek z&#64;vináč tlapicka tečka net</dd>
-    <dt>Jabber</dt>
-    <dd>tlapicka z&#64;vináč mitranet tečka cz</dd>
+    <dd>marrek z&#64;vináč marrek tečka cz</dd>
 </dl>
-
-
-
-<div id="strana"> <div id="ikony"> <p>
-
-<!--<a href="https://plus.google.com/106541283459415810809"><img src="/images/plusko.png" alt="Google+"  width="90"/></a>-->
-
-<a href="http://twitter.com/MarrekNozka/"><img src="/images/twitterr.png" alt="Twitter"  width="90"/></a>
-
-<a href="https://github.com/MarrekNozka"><img src="/images/github.png" alt="Github"  width="90"/></a>
-
-<a href="https://www.youtube.com/user/YouTlapickaTube"><img src="/images/youtubee.png" alt="Youtube"  width="90"/></a>
-
-<a href="http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka"><img src="/images/wikipedia.png" alt="Wikipedia"  width="90"/></a>
-
-<a href="http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka"><img src="/images/commons.png" alt="Commons"  width="90"/></a>
-
-<a href="http://cs.wikibooks.org/wiki/User:Tlapicka"><img src="/images/wikibook.png" alt="Wikibooks"  width="90"/></a>
-
-<!--<a href="http://hroch.spseol.cz/~nozka"><img src="/images/spseol.png" alt="SPSE Olomouc"  width="90"/></a>-->
-
-</p> </div> </div>
-
-<hr />
-

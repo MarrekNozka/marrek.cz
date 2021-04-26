@@ -23,9 +23,9 @@ následujícím kroku se rozhodne podle těchto pravidel:
 
 Pro zobrazení a animaci jsem použil modul [matplotlib][].
 
-![001011110010001010101110]({filename}/img/gameoflive.png)
+![001011110010001010101110]({static}/img/gameoflive.png)
 
-[game_of_live.py]({filename}/src/game_of_live.py)
+[game_of_live.py]({static}/src/game_of_live.py)
 
     :::python
     import random

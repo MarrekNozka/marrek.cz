@@ -2,7 +2,7 @@ Title: Jak automaticky připojovat vzdálené diskové oddíly
 Date: 2014-10-31 14:57
 Category: Blog
 Tags: Linux, SSH
-Author: Marek Nožka
+Author: MarrekNožka
 
 Autofs
 ==========

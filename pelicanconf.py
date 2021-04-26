@@ -1,89 +1,154 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3.8
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
-AUTHOR = u'Marek Nožka'
-SITENAME = u'Marrek.cz'
-SITEURL = ''
 
-PATH = 'content'
+AUTHOR = "MarrekNozka"
+SITENAME = "Marrek.cz"
+SITEURL = ""
 
-TIMEZONE = 'Europe/Prague'
+PATH = "content"
 
-DEFAULT_LANG = u'cs'
-DEFAULT_DATE = 'fs'
-DEFAULT_CATEGORY = 'Blog'
-
-THEME = 'theme-simplegray/'
-
+THEME = "../elegant/"
+RECENT_ARTICLES_COUNT = 42
+USE_SHORTCUT_ICONS = True
+SOCIAL_PROFILE_LABEL = "Kontakt"
+LANDING_PAGE_TITLE = "Marrkův blog"
+PROJECTS_TITLE = "Moje projekty"
 TYPOGRIFY = True
+
+RECENT_ARTICLE_SUMMARY = True
+
+TAG_CLOUD_STEPS = 6
+TAG_CLOUD_MAX_ITEMS = 200
+
+TIMEZONE = "Europe/Prague"
+DEFAULT_LANG = "cs"
+DEFAULT_DATE = "fs"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+# AUTHOR_FEED_ATOM = None
+# AUTHOR_FEED_RSS = None
 
-GITHUB_URL = 'https://github.com/marreknozka/marreknozka.github.io'
+PLUGIN_PATHS = ["../pelican-plugins"]
+PLUGINS = ["extract_toc"]
+
+PLUGINS += ["tipue_search"]
+DIRECT_TEMPLATES = ["index", "categories", "tags", "archives"]
+DIRECT_TEMPLATES += ["search"]
+
+PLUGINS.append("jinja2content")
+JINJA2CONTENT_TEMPLATES = ["."]
+
+PLUGINS += ["liquid_tags", "liquid_tags.include_code"]
+CODE_DIR = "code"
+
+PLUGINS += ["related_posts"]
+RELATED_POSTS_MAX = 12
+RELATED_POSTS_LABEL = "Související posty"
+
+PLUGINS += ["series"]
+SERIES_TITLE = "Další posty v této sérii"
+
+PLUGINS += ["render_math"]
 
 # Blogroll
 LINKS = (
-    ('www.jezisuzdravuje.cz', 'http://www.jezisuzdravuje.cz'),
-    ('www.vojtechkodet.cz', 'http://www.vojtechkodet.cz'),
-    ('Milujte se', 'http://milujte.se'),
-    ('Ron Wyatt', 'http://www.b-a-n.cz/informace.html'),
-    ('Stvoření?', 'http://www.stvoreni.cz/'),
-    ('Manželství.cz', 'http://www.manzelstvi.cz/'),
-    ('Maria.cz', 'http://www.maria.cz/'),
-    ('Jsem pro život', 'http://prolife.cz/'),
-    ('Kurzy α', 'http://www.kurzyalfa.cz/'),
-    ('MatPlotLib', 'http://matplotlib.org'),
-    ('NumPy', 'http://www.numpy.org/'),
-    ('SciPy', 'http://scipy.org/'),
-    ('Zim - A Desktop Wiki', 'http://zim-wiki.org/'),
-    ('VOŠ a SPŠe Olomouc', 'http://www.spseol.cz/'),
-    ('Antispam', 'http://antispam.er.cz/'),
-    # ('Check I/O', 'http://www.checkio.org/'),
-    ('Oprava trekové obuvy', 'http://www.trekovaobuv.eu/'),
-    ('searchcode.com', 'https://searchcode.com/'),
-    # ('', ''),
+    ("Pelican", "https://getpelican.com/"),
+    ("Python.org", "https://www.python.org/"),
+    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 )
+
 # Social widget
 SOCIAL = (
-    ('Github', 'http://github.com/MarrekNozka'),
-    ('Twitter', 'http://twitter.com/MarrekNozka'),
-    ('YouTube', 'https://www.youtube.com/user/YouTlapickaTube'),
-    ('Flickr', 'http://www.flickr.com/photos/tlapicka/'),
-    ('Wikipedista', 'http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka'),
-    ('Wikiobčan',
-        'http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka'),
-    ('Wikispisovatel', 'http://cs.wikibooks.org/wiki/User:Tlapicka'),
-    ('Mamut', 'http://mamut.spseol.cz/nozka/'),
+    ("email", "marrek&#32;z&#64;vináč&#32;marrek&#32;tečka&#32;cz"),
+    ("GitLab", "https://gitlab.com/MarrekNozka"),
+    ("GitHub", "https://github.com/MarrekNozka"),
+    ("Twitter", "https://twitter.com/MarrekNozka"),
+    ("YouTube", "https://www.youtube.com/c/MarekNožka"),
+    ("reddit", "https://www.reddit.com/user/MarrekNozka"),
+    ("StackOverflow", "https://stackoverflow.com/users/2188314/marreknožka"),
+    ("Telegram", "https://t.me/MarrekNozka"),
+    ("flicker", "https://www.flickr.com/photos/tlapicka/"),
+    ("Wikipedia", "http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka"),
+    (
+        "Commons",
+        "https://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka",
+    ),
+    ("RSS", "/feeds/all.atom.xml")
+    # ("", ""),
 )
 
-DEFAULT_PAGINATION = 20
-
-# MARKDOWN = [
-#     'codehilite(css_class=highlight)',
-#     'extra',
-#     'headerid(level=2)',
-#     'toc',
-#     'linksShortcuts:Shortcuts',
-# ]
-
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.toc': {},
-        'markdown.extensions.headerid': {'level': 2},
+PROJECTS = [
+    {
+        "name": "i3-jinja-config",
+        "url": "https://github.com/MarrekNozka/i3-jinja-config",
+        "description": "Vytvoření konfigurace pro i3 window manager"
+        " z Jinja2 šablony.",
     },
-    'output_format': 'html5',
-}
+    {
+        "name": "JupyterNotebooks",
+        "url": "https://github.com/MarrekNozka/IPythonNotebooks",
+        "description": "Technické výpočty a grafy pomocí MatPlotLib.",
+    },
+    {
+        "name": "pyOdorik",
+        "url": "https://github.com/MarrekNozka/pyOdorik",
+        "description": "Klientská aplikace příkazového řádku pro snadné "
+        "vyhledání kontaktů "
+        "a objednání zpětného volání u VoIP operátora Odorik.",
+    },
+    {
+        "name": "pwscly",
+        "url": "https://github.com/MarrekNozka/pwscly",
+        "description": "Aplikace příkazové řádky s fuzzy(fzy) vyhledáváním. "
+        "pwscly najde příslušné heslo v souboru formátu .pwsafe3 a "
+        "uloží ho do clipboardu.",
+    },
+    # {
+    #     "name": "",
+    #     "url": "",
+    #     "description": "",
+    # },
+]
+
+DEFAULT_PAGINATION = True
+DEFAULT_PAGINATION = 12
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-STATIC_PATHS = ['img', 'images', 'extra/CNAME', 'src', 'data']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+MARKDOWN = {
+    "extension_configs": {
+        "markdown.extensions.codehilite": {
+            "css_class": "highlight",
+            "linenums": True,
+        },
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+        "markdown.extensions.toc": {"permalink": "true", "baselevel": 2},
+        "markdown.extensions.admonition": {},
+        "mdx_include": {"base_path": PATH},
+    },
+    "output_format": "html5",
+}
+
+PYGMENTS_RST_OPTIONS = {"linenos": "table"}
+
+DOCUTILS_SETTINGS = {
+    "smart_quotes": "yes",
+    "initial_header_level": 3,
+}
+
+STATIC_PATHS = ["extra", "code"]
+STATIC_PATHS += ["theme/images", "theme/css", "images", "img", "src", "data"]
+EXTRA_PATH_METADATA = {
+    "extra/README": {"path": "README.md"},
+    "extra/.nojekyll": {"path": ".nojekyll"},
+    "extra/CNAME": {"path": "CNAME"},
+}
+
+# PIWIK_URL = 'yanek.cz/piwik'
+# PIWIK_SITE_ID = 6

@@ -3,13 +3,10 @@ Date: 2018-06-07 10:45
 Category: Blog
 Tags: modlitba
 Author: Marek Nožka
-
 Summary: Tato úmluva může naprosto zásadně ovlivnit životy našich rodin a
          zejména životy křesťanských rodin. Přesto, že jedná o opravdu
          zásadní dokument, který ČR zaváže k mnoha nehezkým věcem,
          vůbec se o něm nemluví a veřejnost o něm pramálo ví.
-
-
 
 
 V brzké době by se na jednání sněmovny PČR mohla dostat Úmluva Rady Evropy
@@ -83,7 +80,7 @@ pohané!“ Proč se má mezi národy říkat: „Kdepak je ten jejich Bůh?“ 
   máme vychovávat děti. Modleme se za na tento úmysl každý den. Nezapomeňte,
   že na tento úmysl můžeme obětovat také posty, svatá přijímání, růžence.
 * Můžete použít například 
-  [tuto PDF s modlitbou a informacemi]({filename}/data/istamluska_umluva.pdf).
+  [tuto PDF s modlitbou a informacemi]({static}/data/istamluska_umluva.pdf).
 * Spojme se prosím všichni **postem a modlitbou růžence**  na tento úmysl zvláště
   **13. července** a prosme 
   [Pannu Marii Fatimskou](nase-matka-maria-nase-pani-archy.html).
