@@ -64,16 +64,16 @@ stability země,
 pevnosti skal.
 
 Povstávám dnes skrze Boží sílu, která mě řídí,     
-Boží moc, která mě pozvedá,  
-Boží moudrost, která mě vede,    
-Boží oko, které hledí přede mne,    
-Boží ucho, které mi naslouchá,    
-Boží slovo, které ke mě promlouvá,   
-Boží ruku, která mě střeží,   
-Boží cestu, která se prostírá přede mnou,    
-Boží štít, který mě chrání,    
-Boží vojsko, které mě zabezpečuje před ďábelskými léčkami,   
-před pokušením neřesti,    
+skrze Boží moc, která mě pozvedá,  
+skrze Boží moudrost, která mě vede,    
+skrze Boží oko, které hledí přede mne,    
+skrze Boží ucho, které mi naslouchá,    
+skrze Boží slovo, které ke mě promlouvá,   
+skrze Boží ruku, která mě střeží,   
+skrze Boží cestu, která se prostírá přede mnou,    
+skrze Boží štít, který mě chrání,    
+skrze Boží vojsko, které mě zabezpečuje před ďábelskými léčkami,   
+před pokušením hříchu a neřesti,    
 před svody tělesnými,    
 před každým, kdo mi přeje zlo,    
 blízko či daleko, ať sám nebo v zástupu.
@@ -86,8 +86,8 @@ proti kouzlům čarodějnic a čarodějů,
 proti všemu vědění okrádajícímu lidské tělo nebo duši,      
 Kriste dnes mě ochraňuj   
 proti jedu, proti požáru,    
-proti utonutí, proti zranění,   
-tak aby ke mě mohla přijít hojnost odměny.
+proti utonutí, proti zranění   
+tak, aby ke mě mohla přijít hojnost tvého života a požehnání.
 
 
 Kristus se mnou,    
@@ -98,12 +98,14 @@ Kristus pode mnou,
 Kristus nade mnou,    
 Kristus po mé pravici,   
 Kristus po mé levici.  
-Kristus po celé mé šířce, délce i výšce.
-Kristus v srdci každého, kdo na mě  myslí,
-Kristus v ústech každého kdo o mě mluví,
-Kristus v každém oku, které na mě hledí,
+Kristus po celé mé šířce, délce i výšce.   
+Kristus v srdci každého, kdo na mě  myslí,   
+Kristus v ústech každého kdo o mě mluví,   
+Kristus v každém oku, které na mě hledí,   
 Kristus v každém uchu, které mě slyší.
 
 Povstávám dnes skrze ohromnou sílu vzývání Trojice,   
 skrze víru v trojjediného,    
 skrze vyznání víru v jediného Tvůrce všeho stvoření.
+
+Amen! Amen! Amen!
