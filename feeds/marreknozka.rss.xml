@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Marrek.cz - MarrekNozka</title><link>https://marrek.cz/</link><description></description><lastBuildDate>Fri, 30 Apr 2021 11:58:42 +0200</lastBuildDate><item><title>Křesťan a Harry Potter</title><link>https://marrek.cz/krestan-a-harry-potter.html</link><description>
+&lt;p&gt;Nedávno jsem se dostal k videu, které řeší téma “Křesťan a Harry Potter”.
+S názory prezentovanými v tomto videu bohužel nemůžu souhlasit.
+A protože mi toto téma přijde velice závažné, zapojil jsem se do diskuse.&lt;/p&gt;
+&lt;p&gt;YouTube ale zřejmě není stavěný na dlouhé komentáře :-). Můj první příspěvek
+sice prošel, ale moje …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">MarrekNozka</dc:creator><pubDate>Mon, 26 Apr 2021 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:marrek.cz,2021-04-26:/krestan-a-harry-potter.html</guid><category>Blog</category><category>víra</category><category>modlitba</category></item><item><title>Pancíř svatého Patrika</title><link>https://marrek.cz/pancir-svateho-patrika.html</link><description>&lt;p&gt;Nedávno jsem narazil na jednu hodně starou a dle mého názoru velice hezkou
+modlitbu, která je označována jako &lt;strong&gt;Hymnus sv. Patrika&lt;/strong&gt;. Celé to začalo tím,
+že se ke mě dostala zhudebněná verze této modlitby s (neveřejnými) českými
+titulky. Angličtina není moje úplně silná stránka, ale tato modlitba se mi
+velice …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">MarrekNozka</dc:creator><pubDate>Wed, 03 Feb 2021 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:marrek.cz,2021-02-03:/pancir-svateho-patrika.html</guid><category>Blog</category><category>víra</category><category>modlitba</category></item><item><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link>https://marrek.cz/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</link><description>&lt;h2 id="autofs"&gt;Autofs&lt;a class="headerlink" href="#autofs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
+prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
+základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
+Sambu nebo jakékoliv &lt;span class="caps"&gt;FUSE&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
+úplně jiný …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">MarrekNožka</dc:creator><pubDate>Fri, 31 Oct 2014 14:57:00 +0100</pubDate><guid isPermaLink="false">tag:marrek.cz,2014-10-31:/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</guid><category>Blog</category><category>Linux</category><category>SSH</category></item></channel></rss>
